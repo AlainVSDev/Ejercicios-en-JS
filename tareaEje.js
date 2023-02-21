@@ -17,7 +17,7 @@ const resultado = arr.reduce((prev, cur) => ((prev[cur] = prev[cur] + true || tr
 if (resultado == 0) {
 return 0;
 }
-console.log(resultado[true]);
+//console.log(resultado[true]);
 
 
 //////////////////////////////////////////////////////////////
@@ -98,12 +98,26 @@ Verificacion de la resolucion de ambas funciones debe mostrar un mensaje.*/
 //('Russia', 17098242) -> Russia is 11.48%
 // ("USA", 9372610) -> "USA is 6.29%
 
+const aTierra = 148940000
+const aPais = (pais, area) => {
+    total = (area * 100 / aTierra);
+    return pais + ' tiene una proporcion de acuerdo al area de la tierra de: ' + total + '%';
+}
+
+// console.log(aPais("Russia", 17098242));
+
 //////////////////////////////////////////////////////////////
 //////////E J E R C I C I O  7///////////////////////////////
 ////////////////////////////////////////////////////////////
 
 // Escribir una funcion que retorne 0 si el input es 1 y 1 si el input es 0
 // No se pueden utilizar condicionales, ternarios, negaciones ni operatores bit
+
+const entrada = (n) => {
+    return 1 - n;
+}
+
+//console.log(entrada(0))
 
 //////////////////////////////////////////////////////////////
 //////////E J E R C I C I O  8///////////////////////////////
@@ -115,3 +129,24 @@ Verificacion de la resolucion de ambas funciones debe mostrar un mensaje.*/
 // Si hay 1 persona -> "user1 esta en linea"
 // Si hay 2 personas -> "user1 y user2 estan en linea"
 // Si hay n>2 personas, "user1 y n-1 mas estan en linea"
+
+
+const bzzz = (m) => {
+    switch (m) {
+        case 0:
+            res = "No hay nadie en línea"
+            break;
+        case 1:
+            res = "user1 está en línea"
+            break;
+        case 2:
+            res = "user1 y user2 están en línea"
+            break;
+        default:
+            res = "user1 y " + (m) + " Usuarios mas estan en linea";
+
+    }
+    return res;
+}
+
+console.log(bzzz(9999))
